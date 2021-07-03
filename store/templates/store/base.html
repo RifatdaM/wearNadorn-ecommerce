@@ -21,7 +21,7 @@
     />
 
     {% comment %} Custom CSS {% endcomment %}
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'store/css/style.css' %}" rel="stylesheet" />
 
     {% comment %} Bootstrap JS {% endcomment %} {% comment %}
     <script
@@ -45,47 +45,45 @@
   </head>
   <body>
     {% comment %} Nav Bar {% endcomment %}
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a
-            href="/"
-            class="
-              d-flex
-              align-items-center
-              mb-3 mb-md-0
-              me-md-auto
-              text-dark text-decoration-none
-            "
-          >
-            <span class="fs-4">Simple header</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="true"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Features</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            </ul>
-          </div>
+      <nav class="navbar navbar-expand-md navigation-wrap">
+      <div class="container-xxl">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" alt="Healty Food" />
+        </a>
+        <!-- toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+          aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-stream navbar-toggler-icon"></i>
+        </button>
+        <!-- navbar link -->
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#explore-food">Explore Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item d-md-none">
+              <a class="nav-link" href="#login">Login</a>
+            </li>
+            <li>
+              <button class="main-btn">Login</button>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
+  </header>
 
     {% comment %} Content form {% endcomment %}
     <div id="content">{% block content %} {% endblock %}</div>
