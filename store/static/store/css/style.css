@@ -92,7 +92,7 @@ h1 {
   font-size: 3.2rem;
   font-weight: 900;
   margin-bottom: 3.2rem;
-  color: var(--color-primary-dark2);
+  color: var(--color-primary);
 }
 h2 {
   font-size: 2.8rem;
@@ -126,7 +126,7 @@ p {
   letter-spacing: 1px;
 }
 .navbar-brand img {
-  height: 64px;
+  height: 32px;
 }
 .main-btn {
   display: inline-block;
@@ -180,4 +180,68 @@ p {
 .testimonial-section h2,
 .book-food-text h2 {
   color: var(--color-white);
+}
+.py-6{
+  padding: 6rem 0;
+}
+/* 
+=================================
+Header Design 
+================================= 
+*/
+.navbar-nav {
+  align-items: center;
+}
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 999;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.navigation-wrap .nav-item {
+  padding: 0 1rem;
+  transition: all 200ms linear;
+}
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: none;
+}
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+.navigation-wrap .main-btn {
+  padding: 0.5rem 2.3rem;
+  box-shadow: none;
+  margin-left: 1rem;
+}
+/* Scroll Fix Navbar */
+.navigation-wrap.scroll-on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-white);
+  box-shadow: 0 0.2rem 2.8rem 0 rgb(0, 0, 0, 0.09);
+  transition: all 0.15s ease-in-out 0s;
+}
+
+
+/* 
+====================
+Card design
+====================
+*/
+
+.img-container{
+  max-width: 300px;
+  max-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
