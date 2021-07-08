@@ -216,6 +216,9 @@ Header Design
   color: var(--color-primary);
   letter-spacing: 1px;
 }
+.nav-link:focus{
+  color: var(--color-secondary);
+}
 .navigation-wrap .main-btn {
   padding: 0.5rem 2.3rem;
   box-shadow: none;
@@ -244,4 +247,8 @@ Card design
   max-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.color-main{
+  color: var(--color-primary);
 }

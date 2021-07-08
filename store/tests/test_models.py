@@ -30,7 +30,7 @@ class TestProductsModel(TestCase):
         Category.objects.create(name='django', slug='django')
         User.objects.create(username='admin')
         self.data1 = Product.objects.create(
-            category_id=1, title='django beginners', created_by_id=1, slug='django_beginners', price='20.00', image='django')
+            category_id=1, title='django beginners', created_by_id=1, slug='django_beginners', price='2000', image='django')
 
     def test_product_model_entry(self):
         """
