@@ -1,0 +1,48 @@
+{% extends '../base.html' %} 
+{% load static %} 
+{% block title %}Wear N Adorn{% endblock %} 
+
+{% block content %}
+
+<div class="container">
+    <main class="py-6">
+        <div class="row g-3 my-5 justify-content-between">
+            <div class="col-md-5 col-lg-5 order-md-first bg-light">
+                <img src="{{ product.image.url }}" alt="Responsive Image" class="img-fluid mx-auto d-block">
+            </div>
+            <div class="col-md-7 col-lg-7 ps-md-3 ps-lg-5 d-flex flex-column justify-content-between">
+                <div>
+                    <h1 class="mb-0">{{product.title|title}}</h1>
+                    <p><span class="lead">{{product.author}}</span> (Author)</p>
+                    <p>{{product.discription|slice:":355"}}...</p>
+                </div>
+                <div>
+                    <div class="col border-bottom">
+                        <div class="row py-3">
+                            <div class="col-6"><h2>Price:</h2></div>
+                            <div class="col-6 text-end"><h2><span class="fw-bold">{{product.price}}</span> BDT</h2></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row py-3 align-items-center">
+                            <div class="col-6">
+                                <label for="select"><p>QTY</p></label>
+                                <select name="select" id="select" class="form-select-lg ms-4" aria-label="Default select example">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </div>
+                            <div class="col-6 text-end"><button type="button" class="main-btn">Add to Basket</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+{% endblock %}

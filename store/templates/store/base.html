@@ -40,7 +40,7 @@
     {% comment %} Nav Bar {% endcomment %}
       <nav class="navbar navbar-expand-md navigation-wrap">
       <div class="container-xxl">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'store:all_products' %}">
           <img src="{% static 'store/img/logo.png' %}" alt="Healty Food" />
         </a>
         <!-- toggle Button -->
@@ -52,7 +52,7 @@
         <div class="collapse navbar-collapse" id="main-nav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'store:all_products' %}">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#category" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
