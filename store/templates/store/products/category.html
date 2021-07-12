@@ -1,6 +1,7 @@
 {% extends '../base.html' %} 
 {% load static %} 
-{% block title %}Wear N Adorn{% endblock %} 
+{% block title %}{{category.name}}{% else %}Products{% endif %}
+{% endblock %} 
 
 
 

@@ -21,6 +21,9 @@
     {% comment %} font awesome {% endcomment %}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 
+    {% comment %} JQuary CDN {% endcomment %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     {% comment %} Bootstrap JS {% endcomment %}
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -40,7 +43,7 @@
     {% comment %} Nav Bar {% endcomment %}
       <nav class="navbar navbar-expand-md navigation-wrap">
       <div class="container-xxl">
-        <a class="navbar-brand" href="{% url 'store:all_products' %}">
+        <a class="navbar-brand" href="/">
           <img src="{% static 'store/img/logo.png' %}" alt="Healty Food" />
         </a>
         <!-- toggle Button -->
@@ -52,12 +55,12 @@
         <div class="collapse navbar-collapse" id="main-nav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'store:all_products' %}">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'store:product_all' %}">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#category" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{% url 'store:all_products' %}">All</a></li>
+                <li><a class="dropdown-item" href="{% url 'store:product_all' %}">All</a></li>
                 {% for c in categories %}
                   <li {% if category.slug == c.slug %}class="selected"{% endif %}>
                     <a class="dropdown-item" href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
