@@ -28,10 +28,10 @@
                             <div class="col-6">
                                 <label for="select"><p>QTY</p></label>
                                 <select name="select" id="select" class="form-select-lg ms-4" aria-label="Default select example">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
                                 </select>
                             </div>
                             <div class="col-6 text-end"><button type="button" id="cart-button" value="{{product.id}}" class="main-btn">Add to Basket</button></div>
@@ -48,8 +48,21 @@
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: '{% url "cart:cart_add" %}'
-        })
+            url: '{% url "cart:cart_add" %}',
+            data: {
+                productid: $('#cart-button').val(),
+                productqty: $('#select option:selected').text(),
+                csrfmiddlewaretoken: "{{ csrf_token }}",
+                action: 'post'
+            },
+            success: function(json){
+                document.getElementById("cart-qty").innerHTML = json.qty
+                
+            },
+            error: function(xhr, errmsg, err){
+
+            },
+        });
     });
 </script>
 
