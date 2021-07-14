@@ -4,6 +4,7 @@
 /* Variable */
 :root {
   /* color */
+  --color-red: #ff0f0f;
   /* Primary color */
   --color-primary: #007947;
   --color-primary-dark1: #005b35;
@@ -165,22 +166,23 @@ select{
   -moz-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
 }
-.cart-btn{
+.red-btn{
   display: inline-block;
-  padding: .5rem 3rem;
+  padding: 1rem 3rem;
   line-height: 2.5rem;
-  background-color: var(--color-white);
-  border: 0.3rem solid var(--color-white);
-  color: var(--color-font-dark);
+  background-color: var(--color-red);
+  border: 0.3rem solid var(--color-red);
+  color: var(--color-white);
   font-size: 1.4rem;
   font-weight: 600;
   text-transform: capitalize;
-  box-shadow: 0px 2px 10px -1px rgb(0, 0, 0, 0.19);
+  box-shadow: 0px 2px 10px -1px rgb(0, 0, 0 / 19%);
   -webkit-transition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
 }
+
 .main-btn:hover {
   background-color: transparent;
   color: var(--color-primary);
@@ -190,10 +192,9 @@ select{
   color: var(--color-primary);
   border-color: var(--color-primary);
 }
-.cart-btn:hover {
+.red-btn:hover {
   background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--color-red);
 }
 .wrapper {
   padding: 13.2rem 0;
