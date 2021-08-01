@@ -38,8 +38,8 @@
                                 </select>
                                 <button type="button" id="add-button" value="{{product.id}}"
                                     class="main-btn">Update</button>
-                                <button type="button" id="delete-button" value="{{product.id}}"
-                                    class="red-btn">Delete</button>
+                                <button type="button" id="delete-button" data-index="{{product.id}}"
+                                    class="red-btn delete-btn">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -53,5 +53,26 @@
         </div>
     </div>
 </main>
+
+<script>
+    $(document).on('click', '.delete-btn', function (e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '{% url "cart:cart_delete" %}',
+            data: {
+                productid: $(this).data('index'),
+                csrfmiddlewaretoken: "{{ csrf_token }}",
+                action: 'post'
+            },
+            success: function(json){
+                
+            },
+            error: function(xhr, errmsg, err){
+
+            },
+        });
+    });
+</script>
 
 {% endblock %}
